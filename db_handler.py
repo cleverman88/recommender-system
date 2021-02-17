@@ -102,7 +102,7 @@ class DBHandler:
         self.test_c.execute('SELECT AVG(ABS(Rating-PredRating)) FROM test_table WHERE PredRating IS NOT NULL')
         row = self.test_c.fetchone()
         nMSE = float(row[0])
-        self.logger.info('example MSE for prediction = ' + str(nMSE))
+        self.logger.info('MSE for prediction = ' + str(nMSE))
 
     """
         Closes all the connections
